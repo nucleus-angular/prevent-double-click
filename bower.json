@@ -1,0 +1,11 @@
+{
+  "name": "nucleus-angular-prevent-double-click",
+  "version": "0.2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "jquery": "2.0.x",
+    "angular": "1.0.x",
+    "angular-mocks": "1.0.x",
+    "unstable-angular-complete": "1.1.x"
+  }
+}
