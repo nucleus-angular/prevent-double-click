@@ -1,17 +1,31 @@
+/**
+ * Prevents double clicking on a button
+ *
+ * @module nag.preventDoubleClick
+ * @ngdirective nagPreventDoubleClick
+ */
 angular.module('nag.preventDoubleClick', [])
 .directive('nagPreventDoubleClick', [
-  function(){
+  '$rootScope',
+  function($rootScope){
     return {
       restrict: 'EA',
       controller: [
         '$scope',
         function($scope) {
-          this.unregisterBroadcast = null;
+          /**
+           * Unregisters the callback tied to the trigger-auto-focus event
+           *
+           * @ngscope
+           * @method unregisterFormResetEvent
+           * @type function
+           */
+          $scope.unregisterPreventDoubleClickEvent = null;
 
           $scope.$on('$destroy', function() {
             //if the scope is destroyed, we no longer need this broadcast to be registered
-            if(_.isFunction(this.unregisterBroadcast)) {
-              this.unregisterBroadcast();
+            if(this.unregisterPreventDoubleClickEvent) {
+              this.unregisterPreventDoubleClickEvent();
             }
           });
         }
@@ -20,7 +34,13 @@ angular.module('nag.preventDoubleClick', [])
       priority: 0,
       compile: function(element, attributes, transclude) {
         return function(scope, element, attributes, controllers) {
-          this.unregisterBroadcast = scope.$on('unlock-prevent-double-click-' + attributes.nagPreventDoubleClick, function() {
+          /**
+           * Will unlock the button
+           *
+           * @respondto NagPreventDoubleClick[attribute nag-prevent-double-click]/unlock
+           * @eventlevel root
+           */
+          scope.unregisterPreventDoubleClickEvent = $rootScope.$on('NagPreventDoubleClick[' + attributes.nagPreventDoubleClick + ']/unlock', function() {
             unlockElement();
           });
 
