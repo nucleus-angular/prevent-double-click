@@ -1,0 +1,16 @@
+{
+  "name": "Nucleus Angular Prevent Double Click",
+  "description": "Nucleus Angular Prevent Double Click",
+  "version": "0.4.0",
+  "options": {
+    "outdir": "./docs",
+    "jsonDir": "json",
+    "webDir": "web",
+    "paths": [
+      "."
+    ],
+    "ignorePaths": [
+      "docs"
+    ]
+  }
+}

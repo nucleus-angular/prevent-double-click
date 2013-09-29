@@ -3,6 +3,8 @@
  *
  * @module nag.preventDoubleClick
  * @ngdirective nagPreventDoubleClick
+ *
+ * @nghtmlattribute {int|string} nag-prevent-double-click Unique identifier
  */
 angular.module('nag.preventDoubleClick', [])
 .directive('nagPreventDoubleClick', [

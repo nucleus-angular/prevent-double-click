@@ -3,9 +3,7 @@
   "version": "0.2.1",
   "dependencies": {},
   "devDependencies": {
-    "jquery": "2.0.x",
-    "angular": "1.0.x",
-    "angular-mocks": "1.0.x",
-    "unstable-angular-complete": "1.1.x"
+    "jquery": "2.0.3",
+    "unstable-angular-complete": "1.2.0rc2"
   }
 }
