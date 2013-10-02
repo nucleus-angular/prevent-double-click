@@ -1,10 +1,16 @@
 /**
- * Prevents double clicking on a button
+ * # Prevent Double Click
+ *
+ * This directive will prevent the user from double clicking on any element that support the disabled property (like a button).  It provide a event that when triggered, the button is re-enabled.
+ *
+ * ```html
+ * <button nag-prevent-double-click="123">button</button>
+ * ```
  *
  * @module nag.preventDoubleClick
  * @ngdirective nagPreventDoubleClick
  *
- * @nghtmlattribute {int|string} nag-prevent-double-click Unique identifier
+ * @nghtmlattribute {mixed} nag-prevent-double-click Unique identifier used in the event it listens to for removed the disabled state
  */
 angular.module('nag.preventDoubleClick', [])
 .directive('nagPreventDoubleClick', [
