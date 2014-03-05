@@ -1,0 +1,8 @@
+{
+  "tests": [
+    "dalek/prevent-double-click.js"
+  ],
+  "browser": [
+    "chrome"
+  ]
+}
