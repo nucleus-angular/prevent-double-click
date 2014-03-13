@@ -12,7 +12,7 @@
  *
  * @nghtmlattribute {mixed} nag-prevent-double-click Unique identifier used in the event it listens to for removed the disabled state
  */
-angular.module('nag.preventDoubleClick', [])
+angular.module('nag.preventDoubleClick')
 .directive('nagPreventDoubleClick', [
   '$rootScope',
   function($rootScope){
