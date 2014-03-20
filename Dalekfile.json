@@ -2,6 +2,7 @@
   "tests": [
     "dalek/prevent-double-click.js"
   ],
+  "logLevel": "1",
   "browser": [
     "chrome"
   ]
